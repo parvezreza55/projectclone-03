@@ -1,0 +1,489 @@
+*{
+    box-sizing: border-box;
+    font-family: "Fjalla One", sans-serif;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+/* navbar start here */
+.nav-head{
+    margin: 10px 0px;
+    color: white;
+    text-align: center;
+    font-family: "Fjalla One", sans-serif;
+    
+}
+
+  [class*="col-"] {
+   float: left;
+   padding: 10px;
+  }
+
+  [class*="col-"] {
+    width: 100%;
+  }
+.nav-bar{
+    text-align: center;
+    background-color: #41868D;
+    padding: 1% 7%;
+   
+}
+.nav-menu a{
+    text-decoration: none;
+  margin: 7px 0;
+    color: white;
+    padding: 10px;
+    font-size: 1.5rem;
+   
+    border-radius: 10px;
+    transition: 0.3s;
+   
+}
+.nav-menu a:hover{
+    background-color: gray;
+}
+.nav-menu{
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+
+
+}
+.nav-bar::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+/* navbar end here */
+
+
+ /* profile start from here */
+ .profile{
+    text-align: center;
+    position: relative;
+    padding: 120px 10px;
+ }
+ .profile .top-weather-icon{
+    position: absolute;
+    top: 20px;
+    right:60px;
+    transition: transform 2s;
+}
+
+.profile .top-weather-icon:hover{
+   
+   transform: rotate(360deg);
+}
+
+ .profile-desc h1{
+    font-size: 3.5rem;
+    font-family: "Satisfy", cursive;
+    text-align: center;
+    
+ }
+ .profile-desc p{
+    text-align: justify;
+    margin: 10px;
+    text-align: center;
+    padding: 20px;
+}
+
+.profile .bottom-weather-icon{
+    position: absolute;
+    bottom: 20px;
+    left:50px;
+    transition: width 2s, transform 2s;
+    width: 120px;
+    color: blue;
+}
+
+.profile .bottom-weather-icon:hover{
+   
+   transform: rotate(360deg);
+   width: 140px;
+   
+}
+ .profile::after{
+    content: '';
+    display: table;
+    clear: both;
+ }
+
+ /* profile ends from here */
+
+ /* about start from here */
+
+.aboutme{
+    background-color: #41868D;
+    padding: 1% 7%;
+    text-align: center;
+    color: white;
+    justify-content: center;
+
+}
+.dotted-hr{
+    border: dotted 6px white;
+    border-bottom: none;
+    width: 70px;
+    margin: 20px auto;
+}
+.aboutme-image img{
+    height: 320px;
+    width: 300px;
+    border: solid black;
+    border-radius: 50%;
+    margin: 25%;
+ 
+}
+.aboutme-desc p{
+    text-align: justify;
+    margin: 10px;
+    text-align: center;
+    padding: 20px;
+}
+
+.aboutme-desc a{
+    text-decoration: none;
+    color: white;
+}
+.aboutme::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.cv-button{
+    background-color: #0d4331;
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 15px;
+    margin:12px;
+}
+.aboutme-hr{
+    margin: 0 auto;
+    border: solid 3px rgb(22, 4, 4);
+    border-radius: 5px;
+
+}
+.aboutme::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+ /* about ends from here */
+ .professional-experience .card{
+     background-color: #A59D9F;
+     padding: 20px;
+     height: 700px;
+     border-radius: 20px;
+     transition: 0.3s;
+     box-sizing: border-box;
+
+ }
+
+ .professional-experience .card:hover{
+    box-shadow: 1px 1px 20px rgb(132, 24, 24);
+ }
+.professional-experience .card-icon{
+    text-align: center;
+
+   
+}
+.professional-experience .card-icon img{
+    width:100px;
+    margin-top: 25px;
+}
+ .img-round{
+    border: solid 3px white;
+    border-radius: 50%;
+    padding: 15px;
+ }
+
+.professional-experience .card-title h2{
+    text-align: center;
+    background-color: rgb(69, 67, 67);
+    border: none;
+    color: white;
+    padding: 15px;
+}
+
+.professional-experience::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.card-desc li a{
+    text-decoration: none;
+    color: white;
+}
+.education::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* skills design start from here */
+.skills .card-desc li{
+    list-style-type: none;
+}
+.skills .card-desc li{
+    margin: 20px;
+    padding: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: relative;
+    
+
+}
+.skills .card-desc li::before{
+    position: absolute;
+    top: calc(100% + 5px);
+    content: '';
+    height: 10px;
+    width: 100%;
+    background-color: rgb(86,86,153,.5);
+    left: 0;
+    border: none;
+    border-radius: 10px;
+
+}
+
+.skills .card-desc li::after{
+    position: absolute;
+    top: calc(100% + 5px);
+    content: '';
+    height: 10px;
+    width:0;
+    background-color: #454343;
+    left: 0;
+    border: none;
+    border-radius: 10px;
+    animation-duration: 3s ;
+    animation-delay: 2s;
+    background-color: rgb(86,86,153,1);
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+
+}
+
+.skills .card-desc li.html::after{
+    animation-name: h;
+}
+@keyframes h{
+    to{
+        width: 80%;
+        background-color: olive;
+        
+    }
+    
+}
+.skills .card-desc li.css::after{
+    animation-name: c;
+}
+@keyframes c {
+    to{
+        width: 90%;
+        background-color: orange;
+    }
+    
+}
+.skills .card-desc li.bootstrap::after{
+    animation-name: b;
+}
+
+.skills .card-desc li.js::after{
+    animation-name: js;
+}
+.skills .card-desc li.jquery::after{
+    animation-name: jq;
+}
+.skills .card-desc li.node::after{
+    animation-name: n;
+}
+
+.skills .card-desc li.express::after{
+    animation-name: e;
+}
+.skills .card-desc li.git::after{
+    animation-name: g;
+}
+.skills .card-desc li.react::after{
+    animation-name: r;
+}
+
+@keyframes b {
+    to{
+        width: 70%;
+        background-color: orange;
+    }
+    
+}
+
+@keyframes js {
+    to{
+        width: 40%;
+        background-color: orange;
+    }
+    
+}
+@keyframes jq {
+    to{
+        width: 30%;
+        background-color: orange;
+    }
+    
+}
+@keyframes n {
+    to{
+        width: 70%;
+        background-color: orange;
+    }
+    
+}
+@keyframes e {
+    to{
+        width: 60%;
+        background-color: orange;
+    }
+    
+}
+@keyframes g {
+    to{
+        width: 70%;
+        background-color: orange;
+    }
+    
+}
+@keyframes r {
+    to{
+        width: 80%;
+        background-color: orange;
+    }
+    
+}
+
+
+.skills{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* skills design ends from here */
+
+.professional-experience{
+    display: flex;
+    flex-wrap: wrap;
+  justify-content: center;
+  
+    
+}
+
+/* achevement start from here */
+
+.acheivement-contact{
+    background-color: #39A2AC;
+    padding: 2% 7%;
+    color: white;
+}
+
+
+.acheivement-contact::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+.acheivement h2{
+    text-align: center;
+  
+}
+.contact h2{
+    text-align: center;
+}
+
+.contact, input , textarea{
+    text-align: center;
+    width: 100%;
+    resize: none;
+    padding: 10px;
+    border:none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+.contact button{
+    border: none;
+    padding: 15px;
+    border-radius: 5px;
+    width: 100px;
+    margin: 10px;
+    background-color: #12282d;
+    color: white;
+}
+
+
+
+/* achevement ends from here */
+
+/* media button start from here */
+
+.contact-links h2{
+    text-align: center;
+}
+
+.contact-links{
+    text-align: center;
+
+}
+.media-button .btn{
+    border: none;
+    font-size: 32px;
+    border-radius: 25px;
+    padding: 5px;
+    width:50px;
+    margin: 10px;
+}
+
+
+/* media button ends from here */
+
+
+
+/* footer start from here */
+
+.footer-menu a{
+   
+    display: block;
+    text-decoration: none;
+    margin: 15px 0;
+    color: white;
+    
+
+}
+.footer-desc{
+    color: white;
+  
+}
+
+footer{
+    background-color: black;
+    padding: 10px;
+    text-align: center;
+}
+
+span{
+    color: red;
+    font-size: 1.5rem;
+}
+footer::after{
+    content: '';
+    display: table;
+    clear: both;
+}
+/* footer start from here */
+
+
+
